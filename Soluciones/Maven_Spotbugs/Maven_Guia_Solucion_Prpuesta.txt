@@ -1,0 +1,18 @@
+CLASE -PrimerBug-
+
+*Eliminar el static del campo calendario dado que compartir una sola instancia
+a través de los límites de subprocesos sin sincronización dará como resultado
+un mal comportamiento en la app.
+
+
+
+
+------------------------------------------------------------------
+
+CLASE -SegundoBug-
+
+* Modificar el método para que no devuelva el calendario, en este caso se
+opta por no devolver nada.
+
+* Eliminar el return del calendario.
+
