@@ -17,7 +17,7 @@ Y por último, pero no menos importante, deberás contar con una versión de Jav
 -- Se recomienda el uso de Java-11 para evitar posibles errores. --
 
 ----------------------------
-DESCRIPCIÓN DEL REPOSITORIO |
+DESCRIPCIÓN DEL REPOSITORIO 
 ----------------------------
 - Ejercicios: En esta carpeta podrás descargar el código de los diferentes ejercicios a realizar. Estos contendrán bugs que deberás encontrar,
               analizar y resolver.
