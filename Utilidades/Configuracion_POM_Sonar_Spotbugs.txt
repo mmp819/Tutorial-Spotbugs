@@ -1,0 +1,33 @@
+<dependencies>
+  	<dependency>
+  		<groupId>com.github.spotbugs</groupId>
+  		<artifactId>sonar-findbugs-plugin</artifactId>
+  		<version>4.2.2</version>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>org.sonarsource.sonarqube</groupId>
+  		<artifactId>sonar-plugin-api</artifactId>
+  		<version>8.9.10.61524</version>
+  		<scope>provided</scope>
+  	</dependency>
+  </dependencies>
+  
+  <build>
+  	<pluginManagement>
+  		<plugins>
+  		  <plugin>
+  			<groupId>org.sonarsource.scanner.maven</groupId>
+  			<artifactId>sonar-maven-plugin</artifactId>
+  			<version>3.8.0.2131</version>
+  		  </plugin>
+  		</plugins>
+  	</pluginManagement>
+  </build>
+  <properties>
+  	<maven.compiler.source>11</maven.compiler.source>
+  	<maven.compiler.target>11</maven.compiler.target>
+  	<sonar.host.url>http://localhost:9000</sonar.host.url>
+  	<sonar.login>admin</sonar.login>
+  	<sonar.password>1234</sonar.password>
+  </properties>
