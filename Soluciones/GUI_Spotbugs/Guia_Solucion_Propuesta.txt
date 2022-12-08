@@ -1,0 +1,41 @@
+CLASE -EDIFICIO-
+
+* Cambiar GetNombre por getNombre.
+
+* Cambiar tostring por toString.
+	Recomendable añadir @Override.
+
+* Completar la definición del método equals.
+
+* Definir un método hashCode en consonancia con equals.
+
+* Definir el método clone, en consonancia con la interfaz implementada.
+
+-------------------------------------------------------------------------
+
+CLASE -VEHICULO-
+
+* Implementar interfaz Cloneable.
+
+* Añadir ID para la serialización.
+
+* Realizar una acción diferente a System.exit.
+
+* Definir correctamente el método Clone.
+
+* Completar método equals.
+
+* Definir método hashCode.
+
+-------------------------------------------------------------------------
+
+CLASE -RUNNER-
+
+* Realizar comparación de matrículas utilizando equals.
+
+* Reemplazar la iteración en bucle por enteros.
+	Podrían existir fallos si la lista contara con matriculas.
+
+* No comparar una matrícula con un vehículo. Comparar, por ejemplo, 2 matrículas.
+
+* No comparar un entero con un valor fuera de su rango.
