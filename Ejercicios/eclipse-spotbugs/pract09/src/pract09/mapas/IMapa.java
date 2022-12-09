@@ -1,4 +1,4 @@
-package pract08;
+package pract09.mapas;
 
 import java.util.List;
 
