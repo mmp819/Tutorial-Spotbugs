@@ -1,0 +1,11 @@
+USELESS OBJECT CREATED
+Una solución para este bug puede ser mostrar por pantalla los elementos del array.
+
+EXCEPTION IS CAUGHT WHEN EXCEPTION IS NOT THROWN
+Una solución puede ser eliminar la estructura try catch.
+
+SWITCH STATEMENT FUND WHERE DEFAULT IS MISSING
+Añadir el default.
+
+DOUBLE ASSIGNEMENT FOR LOCAL VARIABLE
+O dejar una de las ramas o cambiar una de ellas.
