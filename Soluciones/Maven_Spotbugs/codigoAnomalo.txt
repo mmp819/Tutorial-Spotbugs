@@ -9,3 +9,6 @@ Añadir el default.
 
 DOUBLE ASSIGNEMENT FOR LOCAL VARIABLE
 O dejar una de las ramas o cambiar una de ellas.
+
+USELESS NON-EMPTY VOID METHOD
+Poner una accion dentro del bucle.
