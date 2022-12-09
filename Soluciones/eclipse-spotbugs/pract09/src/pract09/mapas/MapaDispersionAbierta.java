@@ -49,7 +49,6 @@ public class MapaDispersionAbierta<K, V> implements IMapa<K, V> {
 			tabla[i] = new LinkedList<Entrada<K, V>>();
 		}
 	}
-	//XXX Complejidad temporal: O(n)
 
 	/**
 	 * Si NO existe la entrada para la llave, anhade la entrada (llave,valor) al mapa.
@@ -72,7 +71,6 @@ public class MapaDispersionAbierta<K, V> implements IMapa<K, V> {
 			entrada.valor = valor;
 		}
 	}
-	//XXX Complejidad temporal: O(n)
 
 	/**
 	 * Si existe la entrada para la llave, la elimina.
@@ -88,7 +86,6 @@ public class MapaDispersionAbierta<K, V> implements IMapa<K, V> {
 			numEntradas--;
 		}
 	}
-	//XXX Complejidad temporal: O(n)
 
 	/**
 	 * Retorna el valor asociado con la llave.
@@ -109,7 +106,6 @@ public class MapaDispersionAbierta<K, V> implements IMapa<K, V> {
 
 		return v;
 	}
-	//XXX Complejidad temporal: O(1)
 
 	/**
 	 * Retorna el numero de entradas en el mapa.
@@ -120,7 +116,6 @@ public class MapaDispersionAbierta<K, V> implements IMapa<K, V> {
 	public int tamanho() {
 		return numEntradas;
 	}
-	//XXX Complejidad temporal: O(1)
 
 	/**
 	 * Vacia el mapa (pasa a tener 0 entradas).
@@ -132,7 +127,6 @@ public class MapaDispersionAbierta<K, V> implements IMapa<K, V> {
 			tabla[i].clear();
 		}
 	}
-	//XXX Complejidad temporal: O(n)
 
 	/**
 	 * Retorna una lista con todas las llaves de las
@@ -153,7 +147,6 @@ public class MapaDispersionAbierta<K, V> implements IMapa<K, V> {
 		}
 		return llaves;
 	}
-	//XXX Complejidad temporal: O(n)
 	
 	/**
 	 * Retorna una lista con todos los valores de las
@@ -174,20 +167,16 @@ public class MapaDispersionAbierta<K, V> implements IMapa<K, V> {
 		}
 		return valores;
 	}
-	//XXX Complejidad temporal: O(n)
 
 	@Override
 	public String toString() {
 		return Arrays.toString(tabla);
 	}
-	//XXX Complejidad temporal: O(1)
 
 	// Otros metodos
 	int hash(K llave) {
-		int hashNumber = Math.abs(llave.hashCode()) % tabla.length;
-		return hashNumber;
+		return Math.abs(llave.hashCode() + tabla.length) % tabla.length;
 	}
-	//XXX Complejidad temporal: O(1)
 	
 	/**
 	 * Busca la entrada con llave K en la lista correspondiente a su codigo de dispersion.
@@ -205,7 +194,6 @@ public class MapaDispersionAbierta<K, V> implements IMapa<K, V> {
 		}
 		return null;
 	}
-	//XXX Complejidad temporal: O(n)
 	
 	/**
 	 * Elimina de la lista correspondiente la entrada con llave K (si es que existe).
@@ -224,5 +212,4 @@ public class MapaDispersionAbierta<K, V> implements IMapa<K, V> {
 		}
 		return false;
 	}
-	//XXX Complejidad temporal: O(n)
 }
