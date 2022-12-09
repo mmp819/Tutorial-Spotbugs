@@ -1,0 +1,4 @@
+-------------------------Solucion de bug DM-DEFAULT-ENCODING-----------------------------
+1. Cambiar la fila numero 39 por: 
+Writer w = new OutputStreamWriter(new FileOutputStream(uploadLocation + filename), "UTF-8");
+BufferedWriter bw = new BufferedWriter(new PrintWriter(w, true));
