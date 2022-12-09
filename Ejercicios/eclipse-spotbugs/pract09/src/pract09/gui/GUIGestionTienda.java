@@ -63,8 +63,6 @@ public class GUIGestionTienda {
 				codigo = tienda.anhadeProducto(new Producto(descripcion, unidades));
 				mensaje("Producto", "Codigo: " + codigo);
 
-				break;
-
 			case ANHADE_CLIENTE:
 				lect = new Lectura("Datos cliente");
 				lect.creaEntrada("Nombre", "Lolo");
@@ -78,9 +76,7 @@ public class GUIGestionTienda {
 				} catch (Tienda.ClienteYaExiste e) {
 					mensaje("Error", "Ya existe un cliente con el DNI indicado");
 				}
-
-				break;
-
+				
 			case NUEVA_VENTA:
 				lect = new Lectura("Datos venta");
 				lect.creaEntrada("DNI cliente", dni);
@@ -110,8 +106,6 @@ public class GUIGestionTienda {
 				} catch (Tienda.ProductoNoExiste p) {
 					mensaje("Error", "No existe el producto con el codigo indicado");	
 				}
-				break;
-
 
 			case ACTUALIZA_STOCK:
 				lect = new Lectura("Datos stock");
@@ -136,7 +130,6 @@ public class GUIGestionTienda {
 				} catch (Tienda.ProductoNoExiste p) {
 					mensaje("Error", "No existe el producto con el codigo indicado");	
 				}
-				break;
 
 			case PRODUCTOS_EN_RANGO:
 				lect = new Lectura("Rango productos");
@@ -155,8 +148,6 @@ public class GUIGestionTienda {
 				}
 				mensaje("Productos entre " + codIni + " y " + codFin, 
 						productosString);
-
-				break;
 				
 			default:
 				throw new AssertionError("Opcion no esperada");

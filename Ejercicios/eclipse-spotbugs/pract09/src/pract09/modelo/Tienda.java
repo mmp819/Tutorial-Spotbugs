@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.TreeMap;
 
-import pract08.*;
+import pract09.mapas.*;
 
 /**
  * Clase que representa una tienda que oferta una serie de productos.

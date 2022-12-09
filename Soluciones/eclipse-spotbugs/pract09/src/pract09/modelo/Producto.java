@@ -47,9 +47,7 @@ public class Producto {
 	private static int generaCodigoProducto() {
 		contadorProductos++;
 		Random random = new Random();
-		int number = random.nextInt(900 + contadorProductos);
-		
-		return number;
+		return random.nextInt(900 + contadorProductos);
 	}
 
 	/**

@@ -48,7 +48,6 @@ public class Tienda {
 		clientes = new MapaDispersionAbierta<>(5);
 		productos = new TreeMap<>();
 	}
-	//XXX Complejidad temporal: O(1)
 
 	/**
 	 * Anhade un nuevo producto a la tienda.
@@ -59,7 +58,6 @@ public class Tienda {
 		productos.put(producto.codigo(), producto);
 		return producto.codigo();
 	}
-	//XXX Complejidad temporal: O(1)
 	
 	/**
 	 * Registra un nuevo cliente en la tienda.
@@ -75,7 +73,6 @@ public class Tienda {
 
 		clientes.anhade(cliente.dni(), cliente);
 	}
-	//XXX Complejidad tmeporal: O(n)
 
 	/**
 	 * Retorna el stock del producto.
@@ -91,7 +88,6 @@ public class Tienda {
 		}
 		return productoBuscado.unidadesStock();
 	}
-	// Complejidad temporal: O(1)
 	
 	/**
 	 * Actualiza el stock de un producto.
@@ -109,7 +105,6 @@ public class Tienda {
 		}
 		return productoBuscado.actualizaStock(cantidad);
 	}
-	//XXX Complejidad temporal: O(n)
 
 	/**
 	 * Realiza una venta de un producto.
@@ -144,8 +139,7 @@ public class Tienda {
 		productoBuscado.actualizaStock(-cantidad);
 		return true;
 	}
-	//XXX Complejidad temporal: O(n)
-
+	
 	/**
 	 * Retorna los productos con codigos en el rango [codIni, codFin].
 	 * Los productos retornados se encuentran ordenados de menor a mayor codigo.
@@ -156,11 +150,9 @@ public class Tienda {
 	public Collection<Producto> productosEnRango(int codIni, int codFin) {
 		return productos.subMap(codIni, codFin).values();
 	}
-	//XXX Complejidad temporal: O(1)
 
 	// Metodos privados
 	private Producto buscaProducto(int codProducto) {
 		return productos.get(codProducto);
 	}
-	//XXX Complejidad temporal: O(1)
 }
